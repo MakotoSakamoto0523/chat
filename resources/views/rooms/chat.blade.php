@@ -41,10 +41,10 @@
                                <li class="pl-3 pt-1 text-xs">{{ $chat->user->name }}</li> 
                                <li class="px-2 ml-2 mb-2 inline-flex justify-center items-center border-2 bg-white  border-gray-100 rounded-md font-semibold ">{{ $chat->body }}</li>
                                @isset($game_predicts->where('user_id',$chat->user_id)->first()->choice)
-                                          @if($game_predicts->where('user_id',$chat->user_id)->first()->choice == 0)<p class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text-purple-600 text-white">勝敗予想：{{$room->first_bench_team}}勝利</P>
-                                          @else<p class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text-purple-600 text-white">勝敗予想：{{$room->third_bench_team}}勝利</P>
+                                          @if($game_predicts->where('user_id',$chat->user_id)->first()->choice == 0)<p class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text text-white">勝敗予想：{{$room->first_bench_team}}勝利</P>
+                                          @else<p class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text-white">勝敗予想：{{$room->third_bench_team}}勝利</P>
                                           @endif
-                               @else<a class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text-purple-600 text-white" href="/game_predict/{{ $room->id }}">勝敗予想をしよう</a>
+                               @else<a class="px-2 ml-2 mb-2 inline-flex bg-purple-600 rounded-lg text-xs text-white" href="/game_predict/{{ $room->id }}">勝敗予想をしよう</a>
                                @endisset
                             @endforeach
                         </ul>
