@@ -26,11 +26,11 @@
                     @else    
                         @foreach($myrooms as $myroom)
                             <div class='bg-violet-50 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg'>
-                                <p class='px-2 py-1 ml-2 mb-2 text-xs'>{{ $myroom->created_at }}</p>
+                                <p class='px-2 py-1 ml-2 mb-2 text-xs font-semibold text-purple-500'>{{ $myroom->created_at }}</p>
                                 <P class='px-2 py-1 ml-2 mb-2 text-2xl font-bold'>{{ $myroom->title }}</P>
                                 <P class='px-2 py-1 ml-2 mb-2 text-lg font-bold'>{{ $myroom->comment }}</P>
                                 <P class='px-2 py-1 ml-2 mb-2 text-xl font-bold'>{{ $myroom->first_bench_team }} VS {{ $myroom->third_bench_team }}</P>
-                                <div class='px-2 py-1 ml-2 mb-2 inline-flex justify-center items-center gap-2 rounded-md border-2 border-purple-200 font-semibold text-purple-500 hover:text-white hover:bg-purple-500 hover:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800'><a href="/rooms/{{ $myroom->id }}/preview">のぞいてみる</a></div>
+                                <div class='mt-2 ml-4 px-2 py-1 ml-2 mb-2 inline-flex justify-center items-center gap-2 rounded-md border-2 border-purple-500 font-semibold text-purple-500 hover:text-white hover:bg-purple-500 hover:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800'><a href="/rooms/{{ $myroom->id }}/preview">のぞいてみる</a></div>
                             </div>
                             <div style='border-bottom: 1px solid violet'>
                                         
